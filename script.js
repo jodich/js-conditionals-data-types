@@ -11,18 +11,12 @@
 // Write your solution below.
 // ====================================================================
 
+/* --answer here
 
+var secondNum = prompt("Give me another number!")
+console.log(Math.abs(firstNum - secondNum))
 
-
-
-
-
-
-
-
-
-
-
+*/
 
 // ========================== Exercise 2 ==============================
 // Prompt the user for a number, then console.log its ordinal version.
@@ -37,19 +31,8 @@
 // Write your solution below
 // ====================================================================
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+// method 1: use switch
+// method 2 : determine the 2nd last value of the string
 
 
 
@@ -62,18 +45,18 @@
 // =======================================================================
 
 
+/* -- answer here
+
+var userNum = parseInt(prompt("Give me a number from 0 to 10!"));
+var genNum = Math.floor(Math.random() * 11); 
+
+if (userNum === genNum) {
+	console.log("Yay! Your number matched!")
+} else {
+	console.log("Your numbers did not match! :( ")
 
 
-
-
-
-
-
-
-
-
-
-
+*/
 
 
 // ========================== Exercise 4 ===============================
@@ -91,18 +74,15 @@
 
 
 
+// var possible = "ABCDEFGHIJKLMNOPQRSTUVabcdefghigklmnopqrstuvwxyz0123456789"
+// var results = ""
 
+// for (var i = 0; i < 6; i++) {
+// 	var gen = possible[Math.floor(Math.random() * 62)];
+// 	results += gen;
+// }
 
-
-
-
-
-
-
-
-
-
-
+// console.log(results);
 
 
 
@@ -115,25 +95,17 @@
 // Write your solution below.
 // ====================================================================
 
-var testArray = [1, 2, 4, 8, 16, 32, 64, 128];
+// var testArray = [1, 2, 4, 8, 16, 32, 64, 128];
+// var randomArray = [];
 
+// // !!! ask, why the numbers come out so weirdly in the console
+// for (i=0; testArray.length > 0; i++) {
+// 	var randomArrayIndex = Math.floor(Math.random() * testArray.length);
+// 	var randomArrayValue = testArray.splice(randomArrayIndex, 1);
+// 	randomArray.push(randomArrayValue);
+// }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// console.log(randomArray)
 
 
 // ========================== Exercise 6 ==============================
@@ -168,17 +140,68 @@ var Phonebook = {
     "Nelson Tan"    :   63396565
 };
 
+// // ---- part 1
+// var inputName = prompt("Give me a name: Jason, Amelie, Sing An, Ong Tng Kai, Nelson Tan")
 
+// if (Phonebook[inputName]) {
+// 	console.log(Phonebook[inputName]);
+// } else {
+// 	console.log("Not valid input");
+// }
 
+// // ---- part 2
+// var inputName = prompt("Give me a name");
+// var inputNum = parseInt(prompt("Give me a new num"));
 
+// var eachName = Object.keys(Phonebook);
 
+// for (i=0; i < eachName.length; i++) {
+// 	if (eachName[i] === inputName) {
+// 		//update number
+// 		Phonebook[inputName] = inputNum;
+// 		console.log(inputName + "\'s new number is " + inputNum);
+// 	} 
+// }
 
+// console.log(Phonebook);
 
+// // ---- part 3 
 
+// var inputName = prompt("Give me a name");
+// var inputNum = parseInt(prompt("Give me a new num"));
 
+// var eachName = Object.keys(Phonebook);
+// var eachNum = Object.values(Phonebook);
 
+// for (i=0; i < eachName.length; i++) {
+// 	if (eachName[i] !== inputName) {
+//  		//update number
+//  		Phonebook[inputName] = inputNum;
+//  		console.log(inputName + "\'s number is " + inputNum);
+//  		break;
+//  	} 
+// }
 
+// console.log(Phonebook);
 
+// // ---- part 4
+
+// var inputName = prompt("Give me a name: Jason, Amelie, Sing An, Ong Tng Kai, Nelson Tan");
+// delete Phonebook[inputName];
+// console.log(Phonebook);
+
+// ---- bonus
+
+var inputNum = parseInt(prompt("Give me a num"));
+
+var eachName = Object.keys(Phonebook); // eachName = ["Jason", "Amelie", "Sing An", "Ong Tng Kai", "Nelson Tan"]
+var eachNum = Object.values(Phonebook); // eachNum = [91216599, 64239839, 85404834, 94547788, 63396565]
+
+for (i=0; i < eachNum.length; i++) {
+	if (eachNum[i] === inputNum) {
+		console.log(eachName[i]);
+	}
+}
 
 
 
